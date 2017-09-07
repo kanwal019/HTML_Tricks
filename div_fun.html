@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>Playing with JQuery....</title>
+<style>
+body
+{
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+#master
+{
+	float:left;
+	margin-left:35%;
+	margin-top:12%;
+	border:2px solid #292929;
+	height:360px;
+	width:360px;
+}
+
+#part1
+{
+	float:left;
+	margin:0;
+	padding:0;
+	border-bottom:1px solid #292929;
+	height:50%;
+	width:100%;
+}
+
+#part2
+{
+	float:left;
+	margin:0;
+	padding:0;
+	height:50%;
+	width:100%;
+}
+
+#square1
+{
+	float:left;
+	margin:0;
+	padding:0;
+	border-right:1px solid #292929;
+	height:100%;
+	width:50%;
+	background-color:#E4F2FF;
+}
+
+#square2
+{
+	float:left;
+	margin:0;
+	padding:0;
+	height:100%;
+	width:49.6%;
+	background-color:#78BCFF;
+}
+
+#square3
+{
+	float:left;
+	margin:0;
+	padding:0;
+	border-right:1px solid #292929;
+	height:100%;
+	width:50%;
+	background-color:#1E90FF;
+}
+
+#square4
+{
+	float:left;
+	margin:0;
+	padding:0;
+	height:100%;
+	width:49.6%;
+	background-color:#125699;
+}
+</style>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	$("#square1").click(function()
+	{
+		$("#part2").animate({height:'8%'});
+		$("#part1").animate({height:'92%'});
+		$("#square2").animate({width:'9.6%'});
+		$("#square1").animate({width:'90%'});
+		$("#square4").animate({width:'9.6%'});
+		$("#square3").animate({width:'90%'});
+	});
+	$("#square2").click(function()
+	{
+		$("#part2").animate({height:'8%'});
+		$("#part1").animate({height:'92%'});
+		$("#square1").animate({width:'9.6%'});
+		$("#square2").animate({width:'90%'});
+		$("#square3").animate({width:'9.6%'});
+		$("#square4").animate({width:'90%'});
+	});
+	$("#square3").click(function()
+	{
+		$("#part1").animate({height:'8%'});
+		$("#part2").animate({height:'92%'});
+		$("#square4").animate({width:'9.6%'});
+		$("#square3").animate({width:'90%'});
+		$("#square2").animate({width:'9.6%'});
+		$("#square1").animate({width:'90%'});
+	});
+	$("#square4").click(function()
+	{
+		$("#part1").animate({height:'8%'});
+		$("#part2").animate({height:'92%'});
+		$("#square3").animate({width:'9.6%'});
+		$("#square4").animate({width:'90%'});
+		$("#square1").animate({width:'9.6%'});
+		$("#square2").animate({width:'90%'});
+	});
+});
+</script>
+</head>
+<body>
+<div id="master">
+<div id="part1">
+<div id="square1"></div>
+<div id="square2"></div>
+</div>
+<div id="part2">
+<div id="square3"></div>
+<div id="square4"></div>
+</div>
+</div>
+</body>
+</html>

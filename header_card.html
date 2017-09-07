@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Header Animation</title>
+<style>
+body
+{
+	height:100%;
+	width:100%;
+	padding:0%;
+	margin:0%;
+	overflow:hidden;
+}
+
+p
+{
+	color:white;
+	font-family:Jokerman;
+	font-size:44px;
+	line-height:16px;
+	text-align:center;
+}
+#header
+{ 
+	border:7px groove white;
+	border-radius:20px;
+	margin:0;
+	height:100px;
+	width:250px;
+	margin-top:19%;
+	float:left;
+	-webkit-animation-name:Animate;
+    -webkit-animation-duration:5s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-play-state:running;
+}
+
+@-webkit-keyframes Animate 
+{
+    0%  {-webkit-transform:rotate(0deg); margin-left:0px; background-color:#3399FF;}
+    33% {-webkit-transform:rotate(360deg); margin-left:300px; background-color:#CC0000;}
+	66% {-webkit-transform:rotate(90deg); margin-left:600px; background-color:#008080;}
+	100%{-webkit-transform:rotate(-90deg); margin-left:1200px; background-color:Yellow;}
+}
+</style>
+</head>
+<body>
+<div id="header"><p>Header</p></div>
+</body>
+</html>

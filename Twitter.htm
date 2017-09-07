@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Twitter</title>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+	</head>
+	<body>
+		<div id="demo"></div>
+		<script type="text/javascript">
+			(function ($)
+			{
+				$.ajax({
+							url: 'http://pc183083:8050/Api/Values/GetTwitterData/5',
+							type: 'get',
+							dataType: 'json',
+							success: function (response)
+							{
+								document.getElementById("demo").innerHTML = response;
+							},
+							error:function(e)
+							{
+								document.getElementById("demo").innerHTML = "API Issue !!";
+							}	
+						});	
+			}			
+		</script>
+	</body>
+</html>
