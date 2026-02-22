@@ -1,23 +1,46 @@
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="style/animation.css" />
-    </head>
-    <body>
-        <div id="container">
-            <span id="text1"></span>
-            <span id="text2"></span>
-        </div>
-        
-        <svg id="filters">
-            <defs>
-                <filter id="threshold">
-                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
-                                            0 1 0 0 0
-                                            0 0 1 0 0
-                                            0 0 0 255 -140" />
-                </filter>
-            </defs>
-        </svg>
-        <script type="text/javascript" src="scripts/text-animation.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tricks - Demo Navigator</title>
+    <link rel="stylesheet" href="style/index.css" />
+</head>
+<body>
+    <main class="container">
+        <h1>HTML Tricks</h1>
+        <p>Use this page to open any demo in the repository.</p>
+
+        <section class="grid">
+            <a class="card" href="animated_text.html">
+                <h2>Animated Text</h2>
+                <p>Text morphing effect with CSS and JavaScript.</p>
+            </a>
+
+            <a class="card" href="fireworks.htm">
+                <h2>Fireworks</h2>
+                <p>CSS-only fireworks animation scene.</p>
+            </a>
+
+            <a class="card" href="animate_div.htm">
+                <h2>Animate Div Grid</h2>
+                <p>Color-shifting grid animation using CSS keyframes.</p>
+            </a>
+
+            <a class="card" href="div_fun.html">
+                <h2>Div Fun</h2>
+                <p>jQuery-driven expanding quadrants interaction.</p>
+            </a>
+
+            <a class="card" href="header_card.html">
+                <h2>Header Card</h2>
+                <p>Moving and rotating header card demo.</p>
+            </a>
+        </section>
+
+        <footer>
+            Project docs: <a href="README.md">README.md</a>
+        </footer>
+    </main>
+</body>
 </html>

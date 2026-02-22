@@ -1,0 +1,91 @@
+:root {
+  --bg-1: #0f172a;
+  --bg-2: #1e293b;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
+  --accent-2: #0369a1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e2e8f0;
+  background:
+    radial-gradient(circle at top right, #0ea5e9 0%, transparent 40%),
+    radial-gradient(circle at bottom left, #22d3ee 0%, transparent 35%),
+    linear-gradient(140deg, var(--bg-1), var(--bg-2));
+  padding: 32px 16px;
+}
+
+.container {
+  width: min(960px, 100%);
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+p {
+  margin: 0 0 24px;
+  color: #cbd5e1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  background: var(--card);
+  color: var(--text);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    border-color 120ms ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-2px);
+  border-color: #bae6fd;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+  outline: none;
+}
+
+.card h2 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  color: var(--accent-2);
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+footer a {
+  color: #bae6fd;
+}
